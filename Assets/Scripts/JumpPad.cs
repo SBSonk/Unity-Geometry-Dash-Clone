@@ -15,7 +15,7 @@ public class JumpPad : MonoBehaviour
         {
             Rigidbody2D rb = col.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(rb.velocity.x, 0);
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
 
             active = false;
             Invoke("Activate", cooldown);
